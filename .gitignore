@@ -1,0 +1,10 @@
+# Data & models
+data/
+*.csv
+*.pkl
+*.parquet
+*.joblib
+
+# OS / cache
+.DS_Store
+__pycache__/
