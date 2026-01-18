@@ -488,7 +488,7 @@ else:
     st.sidebar.warning("Parquet file not found. Please provide a valid path.")
 
 st.sidebar.markdown("### Artifacts folder")
-art_dir = st.sidebar.text_input("Artifacts folder", value=".")
+art_dir = st.sidebar.text_input("Artifacts folder", value="artifacts")
 files = safe_listdir(art_dir)
 
 def path_in_dir(fname: str) -> str:
@@ -510,7 +510,7 @@ rf_lstm_feats_path = st.sidebar.text_input("LSTM hybrid features", value="rf_fea
 rf_lstm_scalers_path = st.sidebar.text_input("LSTM hybrid core scalers", value="rf_core_scalers_1.joblib")
 seq_len = st.sidebar.number_input("LSTM seq_len", min_value=5, max_value=200, value=30, step=1)
 
-rf_3_path = st.sidebar.text_input("3-label IF+RF", value="rf_hybrid_3label_best_recall.joblib")
+rf_3_path = st.sidebar.text_input("3-label IF+RF", value="rf_hybrid_3label_best_precision.joblib")
 iforest_3_path = st.sidebar.text_input("IF models (3-label)", value="iforest_models_3label.joblib")
 feats_3_path = st.sidebar.text_input("3-label hybrid features", value="rf_feature_columns_3label.joblib")
 scalers_3_path = st.sidebar.text_input("3-label core scalers", value="rf_core_scalers_3label.joblib")
